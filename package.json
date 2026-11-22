@@ -1,0 +1,10 @@
+{
+  "name": "solana-memo-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline UTF-8 and instruction-data playground for Solana memos",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test", "start": "node serve.mjs" },
+  "license": "MIT"
+}

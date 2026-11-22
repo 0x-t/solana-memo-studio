@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Solana Memo Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><p class="context">Solana developer tools</p><h1>Memo Studio</h1><p>See the exact UTF-8 bytes behind a memo. Everything stays in this page.</p></header>
+    <section aria-label="Memo editor">
+      <label for="memo">Memo text</label>
+      <textarea id="memo" rows="5" spellcheck="false">Hello, Solana!</textarea>
+      <div class="budget"><label for="budget">Chosen byte budget</label><input id="budget" type="number" min="1" max="1024" value="256"></div>
+      <p id="status" role="status"></p>
+    </section>
+    <section aria-labelledby="output-title">
+      <h2 id="output-title">Instruction data</h2>
+      <pre id="output" tabindex="0"></pre>
+      <div class="actions"><button id="copy" type="button">Copy JSON</button><button id="download" type="button">Download JSON</button></div>
+    </section>
+    <footer><p>The budget is a local editing choice, not a universal on-chain limit. Check your complete transaction before use.</p><p>No wallet connection, signing, transaction submission, storage or analytics.</p></footer>
+  </main>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
